@@ -24,7 +24,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const your_contract = await deploy("DecentralizedIdentity", {
     from: deployer,
     // Contract constructor arguments
-    args: ["0x0e5Dc14A229DfB4356102D57823b5D549Cc3FfF8"],
+    args: [""], //add your wallet address
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
@@ -33,7 +33,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   await hre.run("verify:verify", {
     address: your_contract.address,
-    constructorArguments: ["0x0e5Dc14A229DfB4356102D57823b5D549Cc3FfF8"],
+    constructorArguments: [""], //add wallet address
   });
 
   // Get the deployed contract
